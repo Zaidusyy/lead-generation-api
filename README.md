@@ -188,48 +188,7 @@ You can connect this API with your:
 - Automated job application scripts
 - Career coaching tools
 
-## Examples
 
-### Using cURL
-
-**Search for Jobs:**
-```bash
-curl -X POST http://localhost:3000/api/search \
-  -H "Content-Type: application/json" \
-  -d '{"jobTitle": "Data Scientist", "location": "Remote"}'
-```
-
-**Create Spreadsheet:**
-```bash
-curl -X POST http://localhost:3000/api/search-to-spreadsheet \
-  -H "Content-Type: application/json" \
-  -d '{"jobTitle": "Data Scientist", "location": "Remote"}'
-```
-
-### Using JavaScript Fetch
-
-```javascript
-// Search and create spreadsheet
-fetch('http://localhost:3000/api/search-to-spreadsheet', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    jobTitle: 'Frontend Developer',
-    location: 'San Francisco'
-  })
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Spreadsheet URL:', data.spreadsheetUrl);
-})
-.catch(error => console.error('Error:', error));
-```
-
-## Postman Collection
-
-I've included a Postman collection to help you quickly test the API. Just import the `Lead_Generation_API.postman_collection.json` file into Postman and you're ready to go!
 
 ## Error Handling
 
@@ -246,8 +205,6 @@ Error messages are clear and helpful:
   "error": "Missing required parameter: jobTitle is required"
 }
 ```
-
-## Troubleshooting
 
 ### Common Issues
 
@@ -289,9 +246,6 @@ I welcome contributions! If you want to improve this project:
 
 Please message me before working on major changes.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
